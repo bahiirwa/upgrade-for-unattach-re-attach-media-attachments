@@ -1,6 +1,5 @@
 # Upgrade Unattach and Re-attach Media Attachments
 Contributors: Laurence bahiirwa
-Donate link: http://davidn.de/donate/
 Tags: image,attachment,attachments,media,library,unattach,detach,reattach,unattached,un-attach,attach,assign
 Requires at least: 3.0.0
 Tested up to: 3.5.1
@@ -28,7 +27,8 @@ Upload the plugin to your blog and activate it as any other plugin. **It will wo
 Thanks to [tamlyn](http://profiles.wordpress.org/tamlyn/) who created the plugin [Unattach](http://wordpress.org/extend/plugins/unattach/) and [Unattach and Re-attach Media Attachments](https://wordpress.org/plugins/unattach-and-re-attach-attachments//) which inspired this plugin. Just adding upgrades of the code to the latter so it is safer for use. [My initial issue came from here](https://stackoverflow.com/questions/45690582/image-post-attachments-not-specific-to-post/45705413#45705413)
 
 ## Frequently Asked Questions
-Nothing yet.
+* How can I contribute?
+- You can raise lots of issues here and also make some Pull Requests.
 
 ## Screenshots
 1. The extended "Parent" column in the Media Library
