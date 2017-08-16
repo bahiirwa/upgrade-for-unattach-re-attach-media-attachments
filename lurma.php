@@ -8,7 +8,7 @@
  * Author URI: https://github.com/bahiirwa/lurma
  * Requires at least: 3.0
  * Tested up to: 4.8.0
- * Tags: Lurma, Attachments, Unattach, Re-Attach
+ * Tags: Lurma, Attachments, Unattach, Re-Attach, Image, Media, Library, Detach, Assign
  * Text Domain: lurma
  * License: GPLv2
  *
@@ -23,7 +23,8 @@
  * Basic Security: Exit plugin if accessed directly.
 */
 if ( ! defined( 'ABSPATH' ) ) {
- exit;
+	echo 'Hi there! You are up to no good!';
+	exit;
 }
 
 define( 'LURMA_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );

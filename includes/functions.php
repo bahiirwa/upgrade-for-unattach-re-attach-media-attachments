@@ -1,7 +1,8 @@
 <?php
-  if ( ! defined( 'ABSPATH' ) ) {
-   exit;
-  }
+if ( ! defined( 'ABSPATH' ) ) {
+	echo 'Hi there! You are up to no good!';
+	exit;
+}
 /*
  * Plugin Functions
  * @package   Lurma
