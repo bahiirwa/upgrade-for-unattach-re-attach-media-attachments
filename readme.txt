@@ -1,4 +1,3 @@
-# Upgrade Unattach and Re-attach Media Attachments
 === Plugin Name ===
 Contributors: Laurence bahiirwa
 Donate link: http://davidn.de/donate/
