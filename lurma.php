@@ -1,11 +1,11 @@
 <?php
 /**
  * Plugin Name: Upgrade for Unattach & Re-Attach Media Attachments
- * Plugin URI: https://github.com/bahiirwa/lurma
+ * Plugin URI: https://github.com/bahiirwa/Upgrade-for-Unattach-Re-Attach-Media-Attachments/
  * Description: Unattach and Re-attach images and other attachments from within the media library. The plugin is similar to its predecessors but security and code refactoring has been done. This has plans of being maintained and grown basing on requests of users.
  * Version: 1.0.0
  * Author: Laurence Bahiirwa
- * Author URI: https://github.com/bahiirwa/lurma
+ * Author URI: https://omukiga.com
  * Requires at least: 3.0
  * Tested up to: 4.8.0
  * Tags: Lurma, Attachments, Unattach, Re-Attach, Image, Media, Library, Detach, Assign
