@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 
 /*
- * Deletes 'post_parent' from an attachment to unattach attachment.
+ * Removes an attachment from current 'post_parent'.
  */
  function lurma_unattach_attachment() {
  	global $wpdb;
@@ -38,19 +38,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 
  /*
-  * Implements filter 'manage_upload_columns' to replace column 'parent' with
-  * out custom column 'extended_parent'.
+  * Implements filter 'manage_upload_columns' to replace column title.
   */
  function lurma_manage_upload_columns($columns) {
  	unset($columns['parent']);
- 	$columns['extended_parent'] = __( 'Parent', 'uar');
+ 	$columns['extended_parent'] = __( 'Attachment Post', 'lurma');
  	return $columns;
  }
 
 
  /*
-  * Implementes action 'manage_media_custom_column' to add a column into the
-  * media page with link Attach, Unattach, Re-Attach.
+  * Implementes action 'manage_media_custom_column' to add a column with link Attach, Unattach, Re-Attach.
   */
  function lurma_manage_media_custom_column($column_name, $id) {
  	$post = get_post($id);
@@ -62,49 +60,45 @@ if ( ! defined( 'ABSPATH' ) ) {
  		if (get_post($post->post_parent)) $title = _draft_or_post_title($post->post_parent);
  		$url_unattach = admin_url('tools.php?page=unattach&noheader=true&post_id=' . $post->ID);
  		?>
-     <strong><a href="<?php echo get_edit_post_link( $post->post_parent ); ?>"><?php echo $title ?></a></strong>, <?php echo 'Uploaded on ' . get_the_time(__('Y/m/d')); ?>
+     <strong><a href="<?php echo get_edit_post_link( $post->post_parent ); ?>"><?php echo $title; ?></a></strong>, <?php _e( 'Uploaded on', 'lurma' ); echo ' ' . get_the_time(__('Y/m/d')); ?>
      <br />
-     <a class="hide-if-no-js" onclick="findPosts.open('media[]','<?php echo $post->ID ?>'); return false;" href="#the-list"><?php _e('Re-Attach'); ?> </a>
-     <br />
-     <a href="<?php echo esc_url( $url_unattach ); ?>" title="<?php echo __( "Unattach this media item.", 'uar'); ?>"><?php _e( 'Unattach') ?> </a>
+     <a class="hide-if-no-js" onclick="findPosts.open('media[]','<?php echo $post->ID ?>'); return false;" href="#the-list"><?php _e( 'Re-Attach', 'lurma' ); ?> </a> | <a href="<?php echo esc_url( $url_unattach ); ?>" title="<?php echo __( 'Unattach this media item.', 'lurma'); ?>"><?php _e( 'Unattach', 'lurma' ) ?> </a>
 
     <?php
-    } else {
-      _e( '(Unattached)' ); ?>
-     <br />
-     <a class="hide-if-no-js" onclick="findPosts.open('media[]','<?php echo $post->ID ?>'); return false;" href="#the-list"><?php _e('Attach'); ?> </a>
-     <?php
- 	  }
+    }
+	else {
+		_e( '(Unattached)', 'lurma' ); ?> | <a class="hide-if-no-js" onclick="findPosts.open('media[]','<?php echo $post->ID ?>'); return false;" href="#the-list"><?php _e( 'Attach', 'lurma' ); ?> </a>
+	<?php
+	}
  }
 
  /**
   * Adds new buld actions 'unattach' and 're-attach' to the media lib.
-  *
   * @see http://wordpress.stackexchange.com/questions/29822/custom-bulk-action
  */
  function lurma_custom_bulk_admin_footer() {
  	global $post_type;
  	if( is_admin() ) {
- 		?>
-      <script type="text/javascript">
- 				jQuery(document).ready(function() {
- 					$ = jQuery;
- 					$('<option>').val('unattach').text('<?php _e('Unattach')?>').appendTo("select[name='action']");
- 					$('<option>').val('reattach').text('<?php _e('Re-Attach')?>').appendTo("select[name='action']");
- 					$('<option>').val('unattach').text('<?php _e('Unattach')?>').appendTo("select[name='action2']");
- 					$('<option>').val('reattach').text('<?php _e('Re-Attach')?>').appendTo("select[name='action2']");
+ 	?>
+	<script type="text/javascript">
+		jQuery(document).ready(function() {
+			$ = jQuery;
+			$('<option>').val('unattach').text('<?php _e('Unattach')?>').appendTo("select[name='action']");
+			$('<option>').val('reattach').text('<?php _e('Re-Attach')?>').appendTo("select[name='action']");
+			$('<option>').val('unattach').text('<?php _e('Unattach')?>').appendTo("select[name='action2']");
+			$('<option>').val('reattach').text('<?php _e('Re-Attach')?>').appendTo("select[name='action2']");
 
- 					$('#doaction, #doaction2').click(function(e){
- 					    $('select[name^="action"]').each(function(){
- 							if ( $(this).val() == 'reattach' ) {
- 								e.preventDefault();
- 								findPosts.open();
- 							}
- 						});
- 					});
- 				});
- 			</script>
- <?php
+			$('#doaction, #doaction2').click(function(e){
+			    $('select[name^="action"]').each(function(){
+					if ( $(this).val() == 'reattach' ) {
+						e.preventDefault();
+						findPosts.open();
+					}
+				});
+			});
+		});
+	</script>
+ 	<?php
  	}
  }
 
@@ -130,7 +124,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  		//  ***check_admin_referer('bulk-posts'); REPLACE WITH:
  		check_admin_referer('bulk-media');
 
- 		// make sure ids are submitted.  depending on the resource type, this may be 'media' or 'ids'
+ 		// make sure ids are submitted. depending on the resource type, this may be 'media' or 'ids'
  		if(isset($_REQUEST['media'])) {
  			$post_ids = array_map('intval', $_REQUEST['media']);
  		}
@@ -149,9 +143,6 @@ if ( ! defined( 'ABSPATH' ) ) {
  			case 'unattach':
  				global $wpdb;
 
- 				// if we set up user permissions/capabilities, the code might look like:
- 				//if ( !current_user_can($post_type_object->cap->export_post, $post_id) )
- 				//  wp_die( __('You are not allowed to unattach this post.') );
  				if ( !is_admin() )
  					wp_die( __('You are not allowed to unattach this post.') );
 
