@@ -2,46 +2,42 @@
 /**
  * Plugin Name: Upgrade for Unattach & Re-Attach Media Attachments
  * Plugin URI: https://github.com/bahiirwa/Upgrade-for-Unattach-Re-Attach-Media-Attachments/
- * Description: Unattach and Re-attach images and other attachments from within the media library. The plugin is similar to its predecessors but security and code refactoring has been done. This has plans of being maintained and grown basing on requests of users.
- * Version: 1.0.0
+ * Description: Secure, powerful but simple plugin to Unattach and Re-attach images and other attachments from within the media library.
+ * Version: 1.0.1
  * Author: Laurence Bahiirwa
  * Author URI: https://omukiga.com
  * Requires at least: 3.0
- * Tested up to: 4.8.0
+ * Tested up to: 4.8.1
  * Tags: Lurma, Attachments, Unattach, Re-Attach, Image, Media, Library, Detach, Assign
  * Text Domain: lurma
- * License: GPLv2
- *
+ * License: GPLv2 or Later
 **/
 
 /*
- * @package   Lurma
+ * @package   lurma
  * @link      https://github.com/bahiirwa/lurma
-*/
-
-/*
  * Basic Security: Exit plugin if accessed directly.
-*/
-if ( ! defined( 'ABSPATH' ) ) {
+ */
+ if ( ! defined( 'ABSPATH' ) ) {
 	echo 'Hi there! You are up to no good!';
 	exit;
-}
+ }
 
-define( 'LURMA_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
+ define( 'LURMA_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 
 /*
  * Plugin Callback Functions
-*/
-require_once( LURMA_PLUGIN_DIR . '/includes/functions.php' );
+ */
+ require_once( LURMA_PLUGIN_DIR . '/includes/functions.php' );
 
 /*
  * Run Plugin Functions
 */
-add_action( 'admin_menu', 'lurma_admin_menu' );
-add_filter( 'manage_upload_columns', 'lurma_manage_upload_columns') ;
-add_action( 'manage_media_custom_column', 'lurma_manage_media_custom_column', 0, 2 );
+ add_action( 'admin_menu', 'lurma_admin_menu' );
+ add_filter( 'manage_upload_columns', 'lurma_manage_upload_columns') ;
+ add_action( 'manage_media_custom_column', 'lurma_manage_media_custom_column', 0, 2 );
 
-if( is_admin() ) {
+ if( is_admin() ) {
 	add_action( 'admin_footer', 'lurma_custom_bulk_admin_footer' );
 	add_action( 'load-upload.php', 'lurma_custom_bulk_action' );
-}
+ }
