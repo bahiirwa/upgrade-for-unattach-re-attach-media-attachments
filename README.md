@@ -2,8 +2,8 @@
 * Contributors: Laurence bahiirwa
 * Tags: image,attachment,attachments,media,library,unattach,detach,reattach,unattached,un-attach,attach,assign
 * Requires at least: 3.0.0
-* Tested up to: 4.8.2
-* Stable tag: 1.1.0
+* Tested up to: 5.0.0
+* Stable tag: 1.1.1
 
 Allows to unattach and reattach images and other attachments from within the media library page.
 
@@ -26,11 +26,11 @@ The plugin also provides bulk actions for unattaching and re-attaching multiple 
 1. **It will work out of the box**. Move to your media library and you can unattach and re-attach attachments to various posts.
 
 ## Note
-[My initial issue came from here](https://stackoverflow.com/questions/45690582/image-post-attachments-not-specific-to-post/45705413#45705413). Thanks to [Unattach and Re-attach Media Attachments](https://wordpress.org/plugins/unattach-and-re-attach-attachments//) which inspired this plugin. Just adding upgrades of the code to the latter so it is safer for use and have fixed some bugs.
+[My initial issue came from here](https://stackoverflow.com/questions/45690582/image-post-attachments-not-specific-to-post/45705413#45705413). Thanks to [Unattach and Re-attach Media Attachments](https://wordpress.org/plugins/unattach-and-re-attach-attachments/) which inspired this plugin. Just adding upgrades of the code to the latter so it is safer for use and have fixed some bugs.
 
 ## Frequently Asked Questions
 1. How can I contribute?
-* You can raise lots of issues here and also make some Pull Requests.
+* You can raise lots of issues here and also make some [Pull Requests through github](https://github.com/bahiirwa/Upgrade-for-Unattach-Re-Attach-Media-Attachments)
 
 ## Screenshots
 1. Bulk actions "Unattach" and "Re-Attach" in the Media Library
@@ -38,6 +38,10 @@ The plugin also provides bulk actions for unattaching and re-attaching multiple 
 1. Individual actions "Unattach" and "Re-Attach" per post
 
 ## Changelog
+
+### Version 1.1.1 (15.11.2017) =
+1. Fixed issue/bug with translatability
+1. Gutenberg Tested - New Editor WP 5.0.0
 
 ### Version 1.1.0 (15.10.2017)
 * Fixed issue/bug with attach and unattach options appearing on all bulk action select tags.

@@ -2,9 +2,9 @@
 Contributors: laurencebahiirwa
 Donate link: https://www.patreon.com/omukiguy
 Tags: image,attachment,attachments,media,library,unattach,detach,reattach,unattached,un-attach,attach,assign
-Requires at least: 3.0.0
+Requires at least: 4.9.0
 Tested up to: 5.4
-Stable tag: 1.1.0
+Stable tag: 1.1.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -39,7 +39,7 @@ Fixed issue with attach and unattach options appearing on all bulk action select
 == Frequently Asked Questions ==
 
 = How can I contribute? =
-You can raise lots of issues here and also make some Pull Requests.
+You can raise lots of issues here and also make some [Pull Requests through github](https://github.com/bahiirwa/Upgrade-for-Unattach-Re-Attach-Media-Attachments)
 
 == Screenshots ==
 1. Bulk actions "Unattach" and "Re-Attach" in the Media Library
@@ -47,6 +47,10 @@ You can raise lots of issues here and also make some Pull Requests.
 1. Individual actions "Unattach" and "Re-Attach" per post
 
 == Changelog ==
+
+= Version 1.1.1 (15.11.2017) =
+1. Fixed issue/bug with translatability
+1. Gutenberg Tested - New Editor WP 5.0.0
 
 = Version 1.1.0 (15.10.2017) =
 1. Fixed issue/bug with attach and unattach options appearing on all bulk action select tags.

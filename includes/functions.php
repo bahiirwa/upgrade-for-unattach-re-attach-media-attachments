@@ -95,7 +95,7 @@
 
      					$('#doaction, #doaction2').click(function(e){
      					    $('select[name^="action"]').each(function(){
-     							if ( $(this).val() == 'reattach' ) {
+     							if ( $(this).val() == '<?php _e('reattach', 'lurma')?>' ) {
      								e.preventDefault();
      								findPosts.open();
      							}
