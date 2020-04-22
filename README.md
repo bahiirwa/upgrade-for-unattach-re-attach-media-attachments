@@ -1,13 +1,4 @@
 # Upgrade Unattach and Re-attach Media Attachments
-* Contributors: Laurence bahiirwa
-* Tags: image,attachment,attachments,media,library,unattach,detach,reattach,unattached,un-attach,attach,assign
-* Requires at least: 3.0.0
-* Tested up to: 5.0.0
-* Stable tag: 1.1.1
-
-Allows to unattach and reattach images and other attachments from within the media library page.
-
-## Description
 
 WordPress allows to attach (or assign) images and other attachments organized within the Media Library to posts and pages. A file will automatically be attached to a particular post when uploaded using the Add media button in that post. There are also "Attach" links in the Media Library to manually attach files to posts. Once attached there is no way to unattach or re-attach images, pdfs or any attachment in WordPress core.
 
@@ -15,6 +6,11 @@ This plugin fills this gap by providing two additional links next to "Attach" in
 
 *   **Re-Attach**: Allows to choose a new post to attach the file to
 *   **Unattach**: Totally removes an existing relation between an attachment and a post
+
+## Installation requirements
+* Requires WP at least: 4.9
+* Tested up to: 5.4
+* Stable tag: 1.2.0
 
 ## Bulk Actions
 The plugin also provides bulk actions for unattaching and re-attaching multiple files at once! Just mark the files you want to change, select your desired action from the *Bulk Actions* dropdown and hit *Apply*.
@@ -30,7 +26,7 @@ The plugin also provides bulk actions for unattaching and re-attaching multiple 
 
 ## Frequently Asked Questions
 1. How can I contribute?
-* You can raise lots of issues here and also make some [Pull Requests through github](https://github.com/bahiirwa/Upgrade-for-Unattach-Re-Attach-Media-Attachments)
+* You can raise lots of issues here and also make some [Pull Requests through github](https://github.com/bahiirwa/upgrade-for-unattach-re-attach-media-attachments/)
 
 ## Screenshots
 1. Bulk actions "Unattach" and "Re-Attach" in the Media Library
@@ -38,6 +34,12 @@ The plugin also provides bulk actions for unattaching and re-attaching multiple 
 1. Individual actions "Unattach" and "Re-Attach" per post
 
 ## Changelog
+
+### Version 1.2.0 (22.04.2020)
+1. Improve Internalization for plugin.
+1. Improve file structure for better code management.
+1. Structured the code for WordPress code Standards.
+1. Text for WP 5.4.
 
 ### Version 1.1.1 (15.11.2017) =
 1. Fixed issue/bug with translatability

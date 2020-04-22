@@ -1,10 +1,10 @@
 === Upgrade for Unattach and Re-attach Media Attachments ===
 Contributors: laurencebahiirwa
 Donate link: https://www.patreon.com/omukiguy
-Tags: image,attachment,attachments,media,library,unattach,detach,reattach,unattached,un-attach,attach,assign
+Tags: Attachments, Unattach, Re-Attach, Media Library, Upgrade
 Requires at least: 4.9.0
 Tested up to: 5.4
-Stable tag: 1.1.1
+Stable tag: 1.2.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -16,8 +16,8 @@ WordPress allows to attach (or assign) images and other attachments organized wi
 
 This plugin fills this gap by providing two additional links next to "Attach" in the **Media Library**:
 
-*   **Re-Attach**: Allows to choose a new post to attach the file to
-*   **Unattach**: Totally removes an existing relation between an attachment and a post
+*   **Re-Attach**: Allows user to choose a new post to attach the media file.
+*   **Unattach**: Totally removes an existing relation between an attachment and a post.
 
 == Bulk Actions ==
 The plugin also provides bulk actions for unattaching and re-attaching multiple files at once! Just mark the files you want to change, select your desired action from the *Bulk Actions* dropdown and hit *Apply*.
@@ -31,7 +31,10 @@ The plugin also provides bulk actions for unattaching and re-attaching multiple 
 == Upgrade Notice ==
 
 = 1.1.0 =
-Fixed issue with attach and unattach options appearing on all bulk action select tags.
+1. Improve Internalization for plugin.
+1. Improve file structure for better code management.
+1. Structured the code for WordPress code Standards.
+1. Text for WP 5.4.
 
 == Note ==
 [My initial issue came from here](https://stackoverflow.com/questions/45690582/image-post-attachments-not-specific-to-post/45705413#45705413). Thanks to [Unattach and Re-attach Media Attachments](https://wordpress.org/plugins/unattach-and-re-attach-attachments//) which inspired this plugin. Just adding upgrades of the code to the latter so it is safer for use and have fixed some bugs.
@@ -39,7 +42,7 @@ Fixed issue with attach and unattach options appearing on all bulk action select
 == Frequently Asked Questions ==
 
 = How can I contribute? =
-You can raise lots of issues here and also make some [Pull Requests through github](https://github.com/bahiirwa/Upgrade-for-Unattach-Re-Attach-Media-Attachments)
+You can raise lots of [issues](https://github.com/bahiirwa/upgrade-for-unattach-re-attach-media-attachments/) here and also make some [Pull Requests through github](https://github.com/bahiirwa/upgrade-for-unattach-re-attach-media-attachments/)
 
 == Screenshots ==
 1. Bulk actions "Unattach" and "Re-Attach" in the Media Library
@@ -48,16 +51,8 @@ You can raise lots of issues here and also make some [Pull Requests through gith
 
 == Changelog ==
 
-= Version 1.1.1 (15.11.2017) =
-1. Fixed issue/bug with translatability
-1. Gutenberg Tested - New Editor WP 5.0.0
-
-= Version 1.1.0 (15.10.2017) =
-1. Fixed issue/bug with attach and unattach options appearing on all bulk action select tags.
-1. Tested for WP Version 4.8.2
-1. Better Documentation
-
-= Version 1.0.0 (16.08.2017) =
-1. Security Upgrades added the inspire plugin
-1. Refactor the code to make it leaner
-1. Easy to read code.
+= Version 1.2.0 (22.04.2020) =
+1. Improve Internalization for plugin.
+1. Improve file structure for better code management.
+1. Structured the code for WordPress code Standards.
+1. Text for WP 5.4.
