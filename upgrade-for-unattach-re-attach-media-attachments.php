@@ -47,7 +47,7 @@ if ( 'upload.php' === $pagenow || 'tools.php' === $pagenow ) {
 
 }
 
-add_action( 'plugins_loaded', 'elementor_load_plugin_textdomain' );
+add_action( 'plugins_loaded', 'lurma_load_plugin_textdomain' );
 
 /**
  * Load textdomain.
