@@ -1,10 +1,10 @@
 === Upgrade for Unattach and Re-attach Media Attachments ===
 Contributors: laurencebahiirwa
-Donate link: https://www.patreon.com/omukiguy
+Donate link: https://www.paypal.me/omukiguy
 Tags: Attachments, Unattach, Re-Attach, Media Library, Upgrade
 Requires at least: 4.9.0
-Tested up to: 5.4
-Stable tag: 1.2.0
+Tested up to: 6.0
+Stable tag: 1.2.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -30,7 +30,12 @@ The plugin also provides bulk actions for unattaching and re-attaching multiple 
 
 == Upgrade Notice ==
 
-= 1.1.0 =
+= Version 1.2.1 (07.05.2020) =
+1. Remove unused assets.
+1. Add missing file links.
+1. Test for 5.4.1
+
+= Version 1.2.0 (22.04.2020) =
 1. Improve Internalization for plugin.
 1. Improve file structure for better code management.
 1. Structured the code for WordPress code Standards.
@@ -48,11 +53,3 @@ You can raise lots of [issues](https://github.com/bahiirwa/upgrade-for-unattach-
 1. Bulk actions "Unattach" and "Re-Attach" in the Media Library
 1. The extended "Parent" column in the Media Library
 1. Individual actions "Unattach" and "Re-Attach" per post
-
-== Changelog ==
-
-= Version 1.2.0 (22.04.2020) =
-1. Improve Internalization for plugin.
-1. Improve file structure for better code management.
-1. Structured the code for WordPress code Standards.
-1. Text for WP 5.4.

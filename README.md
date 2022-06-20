@@ -9,8 +9,8 @@ This plugin fills this gap by providing two additional links next to "Attach" in
 
 ## Installation requirements
 * Requires WP at least: 4.9
-* Tested up to: 5.4
-* Stable tag: 1.2.0
+* Tested up to: 6.0
+* Stable tag: 1.2.1
 
 ## Bulk Actions
 The plugin also provides bulk actions for unattaching and re-attaching multiple files at once! Just mark the files you want to change, select your desired action from the *Bulk Actions* dropdown and hit *Apply*.
