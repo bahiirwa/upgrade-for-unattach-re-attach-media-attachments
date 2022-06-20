@@ -12,7 +12,9 @@ Allows to unattach and reattach images and other attachments from within the med
 
 == Description ==
 
-WordPress allows to attach (or assign) images and other attachments organized within the Media Library to posts and pages. A file will automatically be attached to a particular post when uploaded using the Add media button in that post. There are also "Attach" links in the Media Library to manually attach files to posts. Once attached there is no way to unattach or re-attach images, pdfs or any attachment in WordPress core.
+WordPress allows to attach (or assign) images and other attachments organized within the Media Library to posts and pages.
+
+A file will automatically be attached to a particular post when uploaded using the Add media button in that post. There are also "Attach" links in the Media Library to manually attach files to posts. Once attached there is no way to unattach or re-attach images, pdfs or any attachment in WordPress core.
 
 This plugin fills this gap by providing two additional links next to "Attach" in the **Media Library**:
 
