@@ -4,7 +4,7 @@ Donate link: https://www.paypal.me/omukiguy
 Tags: Attachments, Unattach, Re-Attach, Media Library, Upgrade
 Requires at least: 4.9.0
 Tested up to: 6.0
-Stable tag: 1.2.1
+Stable tag: 1.2.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -31,6 +31,10 @@ The plugin also provides bulk actions for unattaching and re-attaching multiple 
 1. **It will work out of the box**. Move to your media library and you can unattach and re-attach attachments to various posts.
 
 == Upgrade Notice ==
+
+= Version 1.2.2 (21.06.2022)
+1. Bugfix for bulk edits.
+1. Text for WP 6.0.
 
 = Version 1.2.1 (07.05.2020) =
 1. Remove unused assets.

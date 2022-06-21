@@ -40,7 +40,6 @@ function lurma_unattach_attachment() {
  */
 function lurma_admin_menu() {
 	if ( current_user_can( 'upload_files' ) ) {
-		// This is hacky but couldn't find the right hook.
 		add_submenu_page( 'tools.php', 'Unattach Media', 'Unattach', 'upload_files', 'unattach', 'lurma_unattach_attachment' );
 		remove_submenu_page( 'tools.php', 'unattach' );
 	}

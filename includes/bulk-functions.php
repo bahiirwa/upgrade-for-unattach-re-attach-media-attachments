@@ -7,6 +7,9 @@
 
 defined( 'ABSPATH' ) || exit;
 
+add_action( 'admin_footer', 'lurma_custom_bulk_admin_footer' );
+add_action( 'load-upload.php', 'lurma_custom_bulk_action' );
+
 /**
  * Adds new buld actions 'unattach' and 're-attach' to the media lib.
  *
@@ -14,7 +17,9 @@ defined( 'ABSPATH' ) || exit;
  * @return void
  */
 function lurma_custom_bulk_admin_footer() {
+
 	global $post_type;
+
 	if ( is_admin() ) {
 		?>
 			<script type="text/javascript">

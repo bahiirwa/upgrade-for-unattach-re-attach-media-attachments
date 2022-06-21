@@ -8,6 +8,9 @@
 
 defined( 'ABSPATH' ) || exit;
 
+add_filter( 'manage_upload_columns', 'lurma_manage_upload_columns' );
+add_action( 'manage_media_custom_column', 'lurma_manage_media_custom_column', 0, 2 );
+
 /**
  * Implements filter 'manage_upload_columns' to replace column 'parent' without custom column 'extended_parent'.
  *
@@ -15,8 +18,15 @@ defined( 'ABSPATH' ) || exit;
  * @return array $columns New Array of columns from media posts.
  */
 function lurma_manage_upload_columns( $columns ) {
-	unset( $columns['parent'] );
-	$columns['extended_parent'] = esc_attr__( 'Parent Post', 'lurma' );
+	// unset( $columns['parent'] );
+	$columns = array(
+		'cb' 		 => $columns['cb'],
+		'title' 	 => esc_attr__( 'File', 'lurma' ),
+		'author' 	 => esc_attr__( 'Author', 'lurma' ),
+		'extended_parent' 	 => esc_attr__( 'Parent Post', 'lurma' ),
+		'date' 		 => __( 'Date' ),
+	);
+
 	return $columns;
 }
 

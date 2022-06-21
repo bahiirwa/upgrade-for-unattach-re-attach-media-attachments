@@ -37,6 +37,15 @@ The plugin also provides bulk actions for unattaching and re-attaching multiple 
 
 ## Changelog
 
+### Version 1.2.2 (22.04.2020)
+1. Bugfix for bulk edits.
+1. Text for WP 6.0.
+
+### Version 1.2.1 (07.05.2020)
+1. Remove unused assets.
+1. Add missing file links.
+1. Test for 5.4.1
+
 ### Version 1.2.0 (22.04.2020)
 1. Improve Internalization for plugin.
 1. Improve file structure for better code management.
