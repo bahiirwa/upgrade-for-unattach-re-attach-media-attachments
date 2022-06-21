@@ -32,7 +32,7 @@ function lurma_custom_bulk_admin_footer() {
 
 					$( '#doaction, #doaction2' ).click(function(e){
 						$( 'select[name^="action"]' ).each(function(){
-							if ( $(this).val() == '<?php esc_attr_e( 'reattach', 'lurma' ); ?>' ) {
+							if ( $(this).val() == 'reattach' ) {
 								e.preventDefault();
 								findPosts.open();
 							}
